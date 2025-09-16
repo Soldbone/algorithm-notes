@@ -4,17 +4,19 @@ N = int(input())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
-new_A = [ [A[x], x] for x in range(len(A)) ]
-new_B = [ [B[x], x] for x in range(len(B)) ]
+A.sort()
+B.sort(reverse=True)
 
-new_A.sort()
-new_B.sort()
+S = 0
+for i in range(N):
+    S += A[i] * B[i]
+print(S)
 
-
-print(new_A)
-print(new_B)
-
-# S = 0
-# for i in range(N):
-#     S += A[i] * B[i]
-# print(S)
+# amado님 코드
+a = int(input())
+A = sorted(map(int, input().split()), )
+B = sorted(map(int, input().split()), reverse=True)
+sum = 0
+for i in range(a):
+    sum += A[i]*B[i]
+print(sum)
