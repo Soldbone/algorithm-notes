@@ -13,7 +13,7 @@ parent = [ i for i in range(N+1) ]
 a와 b를 합친다.
 int, int -> void
 '''
-def union(a: int, b: int):
+def union(a: int, b: int) -> None:
     a = parent[a]
     b = parent[b]
     if a == b:
@@ -25,7 +25,7 @@ def union(a: int, b: int):
 a의 부모를 찾는다.
 int -> int
 '''
-def find(a: int):
+def find(a: int) -> int:
     if a == parent[a]:
         return a
     parent[a] = find(parent[a])
