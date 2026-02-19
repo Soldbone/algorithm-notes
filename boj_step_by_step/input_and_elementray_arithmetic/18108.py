@@ -1,0 +1,3 @@
+CONVERSION_CONSTANT = 2541 - 1998
+y = int(input())
+print(y - CONVERSION_CONSTANT)
